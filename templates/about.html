@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <!-- basic -->
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <!-- mobile metas -->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+      <!-- site metas -->
+      <title>Intelligent Defense System</title>
+      <link rel="icon" href="static/images/app-icon.jpg" type="image/icon type">
+      <meta name="keywords" content="">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <!-- site icons -->
+      <link rel="icon" href="static/images/fevicon/logo.jpg" type="image/png" />
+      <!-- bootstrap css -->
+      <link rel="stylesheet" href="static/css/bootstrap.min.css" />
+      <!-- site css -->
+      <link rel="stylesheet" href="static/css/style.css" />
+      <!-- responsive css -->
+      <link rel="stylesheet" href="static/css/responsive.css" />
+      <!-- colors css -->
+      <link rel="stylesheet" href="static/css/colors.css" />
+      <!-- wow animation css -->
+      <link rel="stylesheet" href="static/css/animate.css" />
+      <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+      <link rel="stylesheet" href="static/css/footer.css">
+      <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+      <![endif]-->
+   </head>
+   <body id="default_theme" class="home_page1">
+      <!-- header -->
+      <header class="header header_style1">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-9 col-lg-10">
+                  <div class="logo"><a href="{{url_for('index')}}"><img src="static/images/IDDS.png" alt="#" /></a></div>
+                  <div class="main_menu float-right">
+                     <div class="menu">
+                        <ul class="clearfix">
+                           <li class="active"><a href="{{url_for('index')}}">Home</a></li>
+                           <li><a href="{{url_for('about')}}">About</a></li>
+                           <li><a href="{{url_for('load')}}">Upload</a></li>
+                           <li><a href="{{url_for('view')}}">View</a></li>
+                           <li><a href="{{url_for('preprocess')}}">Preprocessing</a></li>
+                           <li><a href="{{url_for('model')}}">Model Training </a></li>
+                         
+                        </ul>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-md-3 col-lg-2">
+                  <div class="right_bt"><a class="bt_main" href="{{url_for('prediction')}}">Prediction</a> </div>
+               </div>
+            </div>
+         </div>
+      </header>
+      <section id="banner_parallax" class="inner_page_banner slide_banner1">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12">
+                  <div class="full">
+                     <div class="slide_cont">
+                        <h2 style="right: 114px;">About This Project</h2>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- end header -->
+      <!-- section -->
+      <section class="layout_padding padding_top_0">
+         <div class="container">
+            <div class="row margin_bottom_30">
+               <!-- featured cont -->
+               <div class="col-md-8 cont_theme_blog">
+                  <div class="full">
+                     <h3 style="bottom: 49px;height: 130px;">Detection of cyber attack using Artificial Intelligence</h3>
+                     <p align = "justify">Cyber-crime is proliferating everywhere exploiting every kind of vulnerability to the computing environment. Ethical Hackers pay
+                        more attention towards assessing vulnerabilities and recommending mitigation methodologies. The development of effective
+                        techniques has been an urgent demand in the field of the cyber security community. Most techniques used in today’s IDS are not able
+                        to deal with the dynamic and complex nature of cyber-attacks on computer networks. Machine learning for cyber security has become
+                        an issue of great importance recently due to the effectiveness of machine learning in cyber security issues. Machine learning
+                        techniques have been applied for major challenges in cyber security issues like intrusion detection, malware classification and
+                        detection, spam detection and phishing detection. Although machine learning cannot automate a complete cyber security system, it
+                        helps to identify cyber security threats more efficiently than other software-oriented methodologies, and thus reduces the burden on
+                        security analysts. Hence, efficient adaptive methods like various techniques of machine learning can result in higher detection rates,
+                        lower false alarm rates and reasonable computation and communication costs. Our main goal is that the task of finding attacks is
+                        fundamentally different from these other applications, making it significantly harder for the intrusion detection community to employ
+                        machine learning effectively. </p>
+                  </div>
+               </div>
+               <!-- end featured cont -->
+               <!-- featured image -->
+               <div class="col-md-4 wow fadeInRight" data-wow-delay="0.5" data-wow-duration="1s">
+                  <div class="full">
+                     <div class="center"><img src="static/images/12.jpg" alt="#" style="margin-left: 52px;"/></div>
+                  </div>
+               </div>
+               <!-- end featured image -->
+            </div>
+            <div class="row margin_bottom_30">
+               <!-- featured image -->
+               <div class="col-md-4 wow fadeInLeft" data-wow-delay="0.5" data-wow-duration="1s">
+                  <div class="full">
+                     <div class="center"><img src="static/images/15.jpg" alt="#" /></div>
+                  </div>
+               </div>
+               <!-- end featured image -->
+               <!-- featured cont -->
+               <div class="col-md-8 cont_theme_blog">
+                  <div class="full"style="margin-left: 63px;">
+                     <h3>Importance of cyber attack detection</h3>
+                     <p align = "justify">Cyber security awareness is the combination of both knowing and doing something to protect a business’s information assets. When an enterprise’s employees are cyber security aware, it means they understand what cyber threats are, the potential impact a cyber-attack will have on their business and the steps required to reduce risk and prevent cyber-crime infiltrating their online workspace.
+
+                        Creating a culture around cyber security awareness in the workplace doesn’t mean that you’ll be completely eradicating the risk of data theft or cyber-crime to your business. Malware has burgeoned, becoming more and more sophisticated as each new strand is developed, and we expect to see the evolution and growth of cyber-threats and malware to proliferate. It was reported that 123 new strains of malware were found everyday in 2005[3]. During that year, 10,000 of those threats were new strains of malware. 11 years later, research had shown that every second, four new strains of malicious malware were discovered in Q3 of 2016[4] - it’s crucial to highlight that these were the strains that cyber security companies had found and identified. As new strains of malware grow, enterprises need to ensure that they’re implementing the appropriate security measures, educating their employees and eliminating any weaknesses that make them vulnerable to an attack. Human error is an egregious exploit that can lead to fines and severe business damage.</p>
+                  </div>
+               </div>
+               <!-- end featured cont -->
+            </div>
+            <div class="row margin_bottom_30">
+               <!-- featured cont -->
+               <div class="col-md-8 cont_theme_blog">
+                  <div class="full">
+                     <h3>Necessity of cyber attack detection</h3>
+                     <p align = "justify">Cyber security refers to protecting systems connected to the internet from threats in cyberspace. It involves protecting software, data, and hardware and helps prevent cybercriminals from gaining access to devices or the networks. The importance of cyber security comes down to the desire to keep information, data, and devices private and safe. In today’s world, people store vast quantities of data on computers and other internet-connected devices. Much of which is sensitive, such as passwords or financial data.
+
+                        If a cybercriminal was to gain access to this data, they could cause a range of problems. They could share sensitive information, use passwords to steal funds, or even change data so that it benefits them in some way.
+                        
+                        Companies need cyber security to keep their data, finances, and intellectual property safe. Individuals need it for similar reasons, although intellectual property is less of a factor, and there is a higher risk of losing important files, such as family photos. In the case of public services or governmental organizations, cyber security helps ensure that the community can continue to rely on their services. For example, if a cyber attack targeted a power plant, it could cause a city-wide blackout. If it targeted a bank, it could steal from hundreds of thousands of people.</p>  
+                  </div>
+               </div>
+               <!-- end featured cont -->
+               <!-- featured image -->
+               <div class="col-md-4 wow fadeInRight" data-wow-delay="0.5" data-wow-duration="1s">
+                  <div class="full">
+                     <div class="center"><img src="static/images/14.jpg" alt="#" style="margin-left: 115px;margin-top: 198px;"/></div>
+                  </div>
+               </div>
+               <!-- end featured image -->
+            </div>
+         </div>
+      </section>
+      <!-- end section -->
+      <!-- section -->
+      <section class="layout_padding gradiant_bg cross_layout">
+         <div class="container">
+            <div class="row">
+               <div class="col-sm-12">
+                  <div class="full text_align_center white_fonts">
+                     <div class="heading_main center_head_border heading_style_1">
+                        <!-- <h2>Easy <span>Steps</span></h2> -->
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="row step_section">
+               <div class="offset-xl-1 col-xl-10 col-md-12">
+                  <div class="row">
+                     <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12">
+                        <div class="step_blog arrow_right_step">
+                           <div class="step_inner">
+                              <!-- <i class="fa fa-diamond"></i><br> -->
+                              <!-- <p>Go app store</p> -->
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12">
+                        <div class="step_blog">
+                           <div class="step_inner">
+                              <!-- <i class="fa fa-user"></i><br> -->
+                              <!-- <p>Create an Account</p> -->
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12">
+                        <div class="step_blog">
+                           <div class="step_inner">
+                              <!-- <i class="fa fa-download"></i><br> -->
+                              <!-- <p>Download & Install</p> -->
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12">
+                        <div class="step_blog">
+                           <div class="step_inner">
+                              <!-- <i class="fa fa-thumbs-up"></i><br> -->
+                              <!-- <p>Enjoy & Rate us!</p> -->
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- end section -->
+       <!-- footer -->
+    
+                        <!-- <p>the vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati..</p> -->
+                     
+                  <!-- <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 margin_bottom_30">
+                     <div class="full">
+                        <div class="footer_blog_2 width_9">
+                           <h3>Twitter Feed</h3>
+                           <p><i class="fa fa-twitter"></i> Creative_Talent - 26 mins
+                              Te invitamos a seguir la cta. de WEntrepreneur_ ¡Atrévete! #Emprendimiento #PyMES #Economía #Bussines #Negocios https://t.co/Y7tZMmxGHn
+                           </p>
+                           <p><i class="fa fa-twitter"></i> Creative_Talent - 26 mins
+                              Te invitamos a seguir la cta. de WEntrepreneur_ ¡Atrévete! #Emprendimiento #PyMES #Economía #Bussines #Negocios https://t.co/Y7tZMmxGHn
+                           </p>
+                        </div>
+                     </div>
+                  </div> -->
+                  
+                  
+                 
+         <!-- footer bottom -->
+         <footer class="footer">
+            <div class="container">
+               <div class="row">
+                  <div class="footer-col">
+                     <h4>Contact Us</h4>
+                     <ul>
+                        <li><a href="#">Email: IDS.com</a></li>
+                        <li><a href="#">Phone:+121 56556 565556</a></li>
+                        <li><a href="#">Address:Your Address 123 Street</a></li>
+                     </ul>
+                  </div>
+                  <div class="footer-col">
+                     <h4>Quick links</h4>
+                     <ul>
+                        <li><a href="#">Home </a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Products</a></li>
+                        <li><a href="#">Contact</a></li>
+                     </ul>
+                  </div>
+                  <div class="footer-col">
+                     <h4>company</h4>
+                     <ul>
+                        <li><a href="#">about us</a></li>
+                        <li><a href="#">our services</a></li>
+                        <li><a href="#">privacy policy</a></li>
+                        <li><a href="#">affiliate program</a></li>
+                     </ul>
+                  </div>
+                  <div class="footer-col">
+                     <h4>follow us</h4>
+                     <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+        </footer>
+      
+      <!-- end footer -->
+      <!--=========== js section ===========-->
+      <!-- jQuery (necessary for Bootstrap's JavaScript) -->
+      <script src="static/js/jquery.min.js"></script>
+      <script src="static/js/popper.min.js"></script>
+      <script src="static/js/bootstrap.min.js"></script>
+      <!-- wow animation -->
+      <script src="static/js/wow.js"></script>
+      <!-- custom js -->
+      <script src="static/js/custom.js"></script>
+      <!-- google map js -->
+      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8eaHt9Dh5H57Zh0xVTqxVdBFCvFMqFjQ&callback=initMap"></script>
+      <!-- end google map js -->
+   </body>
+</html>

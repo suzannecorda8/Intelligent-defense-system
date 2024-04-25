@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <!-- basic -->
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <!-- mobile metas -->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+      <!-- site metas -->
+      <title>Intelligent Defense System</title>
+      <link rel="icon" href="static/images/app-icon.jpg" type="image/icon type">
+      <meta name="keywords" content="">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <!-- site icons -->
+      <link rel="icon" href="static/images/fevicon/logo.jpg" type="image/png" />
+      <!-- bootstrap css -->
+      <link rel="stylesheet" href="static/css/bootstrap.min.css" />
+      <!-- site css -->
+      <link rel="stylesheet" href="static/css/style.css" />
+      <!-- responsive css -->
+      <link rel="stylesheet" href="static/css/responsive.css" />
+      <!-- colors css -->
+      <link rel="stylesheet" href="static/css/colors.css" />
+      <!-- wow animation css -->
+      <link rel="stylesheet" href="static/css/animate.css" />
+      <!-- Bootstrap CSS -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+      <link rel="stylesheet" href="static/css/footer.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-****************************************************" crossorigin="anonymous" />
+     
+      <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+<!-- Bootstrap JS -->
+      <!-- Bootstrap CSS -->
+
+<!-- Bootstrap JS -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+      <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+      <![endif]-->
+   </head>
+   <body id="default_theme" class="home_page1">
+      <!-- header -->
+      <header class="header header_style1">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-9 col-lg-10">
+                  <div class="logo"><a href="{{url_for('index')}}"><img src="static/images/IDDS.png" alt="#" /></a></div>
+                  <div class="main_menu float-right">
+                     <div class="menu">
+                        <ul class="clearfix">
+                           <li class="active"><a href="{{url_for('index')}}">Home</a></li>
+                           <li><a href="{{url_for('about')}}">About</a></li>
+                           <li><a href="{{url_for('login')}}">Login</a></li>
+                           <li><a href="{{url_for('registration')}}">Registration</a></li>
+                           <!-- <li><a href="{{url_for('preprocess')}}">Preprocessing</a></li> -->
+                           <!-- <li><a href="{{url_for('model')}}">Model Training </a></li> -->
+             
+                        </ul>
+                     </div>
+                  </div>
+               </div>
+               <video autoplay muted loop id="landing_video" style="position: fixed; right: 0; bottom: 0; min-width: 100%; min-height: 100%;">
+                  <source src="landing_video" type="video/mp4">
+                  <!-- Include other video formats if needed -->
+                  Your browser does not support the video tag.
+               </video>
+               <div class="col-md-3 col-lg-2">
+                  <div class="right_bt"><a class="bt_main" href="{{url_for('prediction')}}">Prediction</a> </div>
+               </div>
+            </div>
+         </div>
+      </header>
+      <section id="banner_parallax" class="slide_banner1">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-6">
+                  <div class="full">
+                     <div class="slide_cont">
+                        <h2  style="left: -1;right: 145px;height: 200px;width: 700px;left: 0px;bottom: 81px;">Detection Of Cyber attack<br> Using Using Artificial Intelligence </h2>
+                        <p style="bottom: 118px;">This project is completely based on the machine learning and we have performed different types of ML algorithms to predict whether there will be a cyber attack .</p>
+                        <!-- <p style="bottom: 19px;">This project is completely based on the sentiment analysis of drug reviews. If the sentiment is positive then we can recommend the drug.</p> -->
+                        <div class="full slide_bt"> <a class="green_bt bt_main" href="{{url_for('load')}}">Let's Start</a> </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-md-6">
+                  <div class="full">
+                     <div class="slide_pc_img wow fadeInRight" data-wow-delay="1s" data-wow-duration="2s"> <img src="static/images/photo.jpg" alt="#"style="left: 79px;bottom: 58px;margin-top: 172px;height: 400px;" /> </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- end header -->
+      <!-- section -->
+      <section class="layout_padding padding_top_0">
+         <div class="container">
+            <div class="row margin_bottom_30">
+               <!-- featured cont -->
+               <div class="col-md-6 cont_theme_blog">
+                  <div class="full">
+                     <h3 style="bottom: 51px;height: 200px;">Brief Explanation About Neural Network</h3>
+                     <p align="justify">Neural networks, that were actually inspired by the human brain’s neurons are a buzzword these days because of their ability to do an amazing amount of work in various domains. Here I am not going to dive into the in-depth theory of neural networks, but for understanding the code some basic concepts will be explained. For a deeper understanding, this article won’t be just enough, you have to go through some standard materials that are present. Saying so, let me concisely explain some concepts.</p>
+                        <div class="full slide_bt"> <a class="white_bt bt_main" href="https://www.analyticsvidhya.com/blog/2021/07/an-introduction-to-logistic-regression/">Learn More</a> </div>
+                  </div>
+               </div>
+               <!-- end featured cont -->
+               <!-- featured image -->
+               <div class="col-md-6 wow fadeInRight" data-wow-delay="0.5" data-wow-duration="1s">
+                  <div class="full">
+                     <div class="center"><img src="static/images/5.jpg" alt="#" /></div>
+                  </div>
+               </div>
+               <!-- end featured image -->
+            </div>
+            <div class="row margin_bottom_30">
+               <!-- featured image -->
+               <div class="col-md-6 wow fadeInLeft" data-wow-delay="0.5" data-wow-duration="1s">
+                  <div class="full">
+                     <div class="center"><img src="static/images/6.jpg" alt="#" /></div>
+                  </div>
+               </div>
+               <!-- end featured image -->
+               <!-- featured cont -->
+               <div class="col-md-6 cont_theme_blog">
+                  <div class="full">
+                     <h3 style="height: 200px;">Brief Explanation About Decision Tree</h3>
+                     <p align = "justify">It is a tool that has applications spanning several different areas. Decision trees can be used for classification as well as regression problems. The name itself suggests that it uses a flowchart like a tree structure to show the predictions that result from a series of feature-based splits. It starts with a root node and ends with a decision made by leaves.<br><br><div class="full slide_bt"> <a class="white_bt bt_main" href="https://www.analyticsvidhya.com/blog/2021/08/decision-tree-algorithm/">Learn More</a> </div></p>
+                  </div>
+               </div>
+               <!-- end featured cont -->
+            </div>
+            <div class="row margin_bottom_30">
+               <!-- featured cont -->
+               <div class="col-md-6 cont_theme_blog">
+                  <div class="full">
+                     <h3 style="height: 130px;">Extreme Gradient Boosting Classifier</h3>
+                     <p align = "justify">XGBoost is a scalable and highly accurate implementation of gradient boosting that pushes the limits of computing power for boosted tree algorithms, being built largely for energizing machine learning model performance and computational speed. With XGBoost, trees are built in parallel, instead of sequentially like GBDT. It follows a level-wise strategy, scanning across gradient values and using these partial sums to evaluate the quality of splits at every possible split in the training set. XGBoost gained significant favor in the last few years as a result of helping individuals and teams win virtually every Kaggle structured data competition. In these competitions, companies and researchers post data after which statisticians and data miners compete to produce the best models for predicting and describing the data.<br><br><div class="full slide_bt"> <a class="white_bt bt_main" href="https://www.nvidia.com/en-us/glossary/data-science/xgboost/#:~:text=XGBoost%20is%20a%20scalable%20and,model%20performance%20and%20computational%20speed.">Learn More</a> </div></p>
+                  </div>
+               </div>
+               <!-- end featured cont -->
+               <!-- featured image -->
+               <div class="col-md-6 wow fadeInRight" data-wow-delay="0.5" data-wow-duration="1s">
+                  <div class="full">
+                     <div class="center"><img src="static/images/XGBoost.jpg" alt="#"  style="margin-left: 145px;"/></div>
+                  </div>
+               </div>
+               <!-- end featured image -->
+               <div class="row margin_bottom_30">
+                  <!-- featured image -->
+                  <div class="col-md-6 wow fadeInLeft" data-wow-delay="0.5" data-wow-duration="1s">
+                     <div class="full">
+                        <div class="center"><img src="static/images/random.jpg" alt="#" /></div>
+                     </div>
+                  </div>
+                  <!-- end featured image -->
+                  <!-- featured cont -->
+                  <div class="col-md-6 cont_theme_blog">
+                     <div class="full">
+                        <h3 style="height: 200px;">Brief Explanation About Random Forest</h3>
+                        <p align = "justify">Random forest is a Supervised Machine Learning Algorithm that is used widely in Classification and Regression problems. It builds decision trees on different samples and takes their majority vote for classification and average in case of regression.
+
+                           One of the most important features of the Random Forest Algorithm is that it can handle the data set containing continuous variables as in the case of regression and categorical variables as in the case of classification. It performs better results for classification problems.<br><br><div class="full slide_bt"> <a class="white_bt bt_main" href="https://www.analyticsvidhya.com/blog/2021/06/understanding-random-forest/#:~:text=Random%20forest%20is%20a%20Supervised,average%20in%20case%20of%20regression.">Learn More</a> </div></p>
+                     </div>
+                  </div>
+                  <!-- end featured cont -->
+                  <div class="row margin_bottom_30">
+                     <!-- featured cont -->
+                     <div class="col-md-6 cont_theme_blog">
+                        <div class="full">
+                           <h3 style="height: 130px;">Extra Tree Classifier</h3>
+                           <p align = "justify">Extremely Randomized Trees Classifier(Extra Trees Classifier) is a type of ensemble learning technique which aggregates the results of multiple de-correlated decision trees collected in a “forest” to output it’s classification result. In concept, it is very similar to a Random Forest Classifier and only differs from it in the manner of construction of the decision trees in the forest.
+
+                              Each Decision Tree in the Extra Trees Forest is constructed from the original training sample. Then, at each test node, Each tree is provided with a random sample of k features from the feature-set from which each decision tree must select the best feature to split the data based on some mathematical criteria (typically the Gini Index). This random sample of features leads to the creation of multiple de-correlated decision trees.
+                              
+                              To perform feature selection using the above forest structure, during the construction of the forest, for each feature, the normalized total reduction in the mathematical criteria used in the decision of feature of split (Gini Index if the Gini Index is used in the construction of the forest) is computed. This value is called the Gini Importance of the feature. To perform feature selection, each feature is ordered in descending order according to the Gini Importance of each feature and the user selects the top k features according to his/her choice.<br><br><div class="full slide_bt"> <a class="white_bt bt_main" href="https://www.geeksforgeeks.org/ml-extra-tree-classifier-for-feature-selection/">Learn More</a> </div></p>
+                        </div>
+                     </div>
+                     <!-- end featured cont -->
+                     <!-- featured image -->
+                     <div class="col-md-6 wow fadeInRight" data-wow-delay="0.5" data-wow-duration="1s">
+                        <div class="full">
+                           <div class="center"><img src="static/images/extra.png" alt="#"  style="margin-left: 145px;margin-top: 157px;"/></div>
+                        </div>
+                     </div>
+                     <!-- end featured image -->
+               </div>
+                  <!-- end featured image -->
+            </div>
+         </div>
+      </section>
+      <!-- end section -->
+      <!-- section -->
+      
+      <!-- end section -->
+      <!-- section -->
+      <!-- <section class="layout_padding layer_style">
+         <div class="container">
+            <div class="row">
+               <div class="col-sm-12">
+                  <div class="full text_align_center">
+                     <div class="heading_main center_head_border heading_style_1">
+                        <h2>Auricle <span>Features</span></h2>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="row app-features">
+               <div class="col-md-4 col-sm-6 col-xs-12">
+                  <ul class="features-left">
+                     <li>
+                        <i class="flaticon-wordpress-logo"></i>
+                        <div class="fl-inner">
+                           <h4>WordPress Installation</h4>
+                           <p>Lorem Ipsum dolroin gravida nibh vel velit auctor aliquet. </p>
+                        </div>
+                     </li>
+                     <li>
+                        <i class="flaticon-windows"></i>
+                        <div class="fl-inner">
+                           <h4>Browser Compatible</h4>
+                           <p>Lorem Ipsum dolroin gravida nibh vel velit auctor aliquet. </p>
+                        </div>
+                     </li>
+                     <li>
+                        <i class="flaticon-price-tag"></i>
+                        <div class="fl-inner">
+                           <h4>eCommerce Ready</h4>
+                           <p>Lorem Ipsum dolroin gravida nibh vel velit auctor aliquet. </p>
+                        </div>
+                     </li>
+                     <li>
+                        <i class="flaticon-new-file"></i>
+                        <div class="fl-inner">
+                           <h4>Easy to Customize</h4>
+                           <p>Lorem Ipsum dolroin gravida nibh vel velit auctor aliquet. </p>
+                        </div>
+                     </li>
+                  </ul>
+               </div>
+               <div class="col-md-4 col-sm-6 col-xs-12">
+                  <ul class="features-right">
+                     <li>
+                        <i class="flaticon-pantone"></i>
+                        <div class="fr-inner">
+                           <h4>Limitless Colors</h4>
+                           <p>Lorem Ipsum dolroin gravida nibh vel velit auctor aliquet. </p>
+                        </div>
+                     </li>
+                     <li>
+                        <i class="flaticon-cloud-computing"></i>
+                        <div class="fr-inner">
+                           <h4>Lifetime Update</h4>
+                           <p>Lorem Ipsum dolroin gravida nibh vel velit auctor aliquet. </p>
+                        </div>
+                     </li>
+                     <li>
+                        <i class="flaticon-line-graph"></i>
+                        <div class="fr-inner">
+                           <h4>SEO Friendly</h4>
+                           <p>Lorem Ipsum dolroin gravida nibh vel velit auctor aliquet. </p>
+                        </div>
+                     </li>
+                     <li>
+                        <i class="flaticon-coding"></i>
+                        <div class="fr-inner">
+                           <h4>Simple Clean Code</h4>
+                           <p>Lorem Ipsum dolroin gravida nibh vel velit auctor aliquet. </p>
+                        </div>
+                     </li>
+                  </ul>
+               </div>
+               <div class="col-md-4 wow fadeInRight" data-wow-delay="0.5" data-wow-duration="1s">
+                  <div class="full">
+                     <div class="center">
+                        <img src="static/images/application_screen.png" alt="#" />
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section> -->
+      <!-- end section -->
+      <!-- section -->
+      <!-- <section class="layout_padding gradiant_bg cross_layout">
+         <div class="container">
+            <div class="row">
+               <div class="col-sm-12">
+                  <div class="full text_align_center white_fonts">
+                     <div class="heading_main center_head_border heading_style_1">
+                        <h2>Easy <span>Steps</span></h2>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="row step_section">
+               <div class="offset-xl-1 col-xl-10 col-md-12">
+                  <div class="row">
+                     <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12">
+                        <div class="step_blog arrow_right_step">
+                           <div class="step_inner">
+                              <i class="fa fa-diamond"></i><br>
+                              <p>Go app store</p>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12">
+                        <div class="step_blog">
+                           <div class="step_inner">
+                              <i class="fa fa-user"></i><br>
+                              <p>Create an Account</p>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12">
+                        <div class="step_blog">
+                           <div class="step_inner">
+                              <i class="fa fa-download"></i><br>
+                              <p>Download & Install</p>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12">
+                        <div class="step_blog">
+                           <div class="step_inner">
+                              <i class="fa fa-thumbs-up"></i><br>
+                              <p>Enjoy & Rate us!</p>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section> -->
+      <!-- end section -->
+      <!-- section -->
+      <!-- <section class="layout_padding">
+         <div class="container">
+            <div class="row">
+               <div class="full">
+                  <div class="row">
+                     <div class="col-sm-12">
+                        <div class="full text_align_center">
+                           <div class="heading_main center_head_border heading_style_1">
+                              <h2>Table price</h2>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-sm-12">
+                  <div class="full" style="margin-top:10px;">
+                     <div class="row">
+                        <div class="col-sm-12 col-md-4">
+                           <div class="table_price text_align_center">
+                              <div class="table_price_head">
+                                 <h5>Basic</h5>
+                              </div>
+                              <div class="table_price_cont">
+                                 <div class="table_price_per">
+                                    <p>$29.00<br>
+                                       <small>/month</small>
+                                    </p>
+                                 </div>
+                                 <div class="table_price_cont_bottm">
+                                    <ul>
+                                       <li>100 MB Disk Space</li>
+                                       <li>2 Subdomains</li>
+                                       <li>5 Email Accounts</li>
+                                       <li>Customer Support 24/7</li>
+                                    </ul>
+                                 </div>
+                              </div>
+                              <div class="table_price_bottm"> <a class="bt_main" href="index.html">Buy now</a> </div>
+                           </div>
+                        </div>
+                        <div class="col-sm-12 col-md-4">
+                           <div class="active_price table_price text_align_center">
+                              <div class="table_price_head">
+                                 <h5>Standard</h5>
+                              </div>
+                              <div class="table_price_cont">
+                                 <div class="table_price_per">
+                                    <p>$39.00<br>
+                                       <small>/month</small>
+                                    </p>
+                                 </div>
+                                 <div class="table_price_cont_bottm">
+                                    <ul>
+                                       <li>100 MB Disk Space</li>
+                                       <li>2 Subdomains</li>
+                                       <li>5 Email Accounts</li>
+                                       <li>Customer Support 24/7</li>
+                                    </ul>
+                                 </div>
+                              </div>
+                              <div class="table_price_bottm"> <a class="reverse_bt bt_main" href="index.html">Buy now</a> </div>
+                           </div>
+                        </div>
+                        <div class="col-sm-12 col-md-4">
+                           <div class="table_price text_align_center">
+                              <div class="table_price_head">
+                                 <h5>Profesional</h5>
+                              </div>
+                              <div class="table_price_cont">
+                                 <div class="table_price_per">
+                                    <p>$45.00<br>
+                                       <small>/month</small>
+                                    </p>
+                                 </div>
+                                 <div class="table_price_cont_bottm">
+                                    <ul>
+                                       <li>100 MB Disk Space</li>
+                                       <li>2 Subdomains</li>
+                                       <li>5 Email Accounts</li>
+                                       <li>Customer Support 24/7</li>
+                                    </ul>
+                                 </div>
+                              </div>
+                              <div class="table_price_bottm"> <a class="bt_main" href="index.html">Buy now</a> </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section> -->
+      <!-- end section -->
+      <!-- section -->
+      <!-- <section class="contact_section">
+         <div class="container-fluid">
+            <div class="row">
+               <div class="col-xs-12 col-sm-12 col-md-6" style="padding:0;">
+                  <div class="full">
+                     <div id="map"></div>
+                  </div>
+               </div>
+               <div class="col-xs-12 col-sm-12 col-md-6" style="padding:0;">
+                  <div class="full">
+                     <div class="contact_form white_heading_border">
+                        <div class="contact_form_inner">
+                           <div class="full_heading white_fonts heading_main heading_style_1">
+                              <h2>Contact <span>us</span></h2>
+                           </div>
+                           <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+                           <div class="form_contact">
+                              <!-- form -->
+                              <!-- <form action="index.html">
+                                 <fieldset>
+                                    <div class="field">
+                                       <input type="text" name="name" placeholder="Your name" required="">
+                                    </div>
+                                    <div class="field">
+                                       <input type="text" name="name" placeholder="Your phone" required="">
+                                    </div>
+                                    <div class="field">
+                                       <input type="email" name="email" placeholder="Email" required="">
+                                    </div>
+                                    <div class="field">
+                                       <textarea name="messager" placeholder="Messager" required=""></textarea>
+                                    </div>
+                                    <div class="field">
+                                       <button class="field_bt">Send</button>
+                                    </div>
+                                 </fieldset>
+                              </form>
+                              <!-- end form -->
+                           <!-- </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>  -->
+         
+         <div style="display: inline-block; margin-right: 20px;">
+            <div style="border: 1px solid #ddd; border-radius: 8px; padding: 20px; background-color: #f9f9f9; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); transition: box-shadow 0.3s ease;">
+                <h3 style="margin-top: 0; font-size: 24px;">Card 1</h3>
+                <p style="margin-bottom: 0; color: #666;">Ok</p>
+            </div>
+        </div>
+    
+        <div style="display: inline-block; margin-right: 20px;">
+            <div style="border: 1px solid #ddd; border-radius: 8px; padding: 20px; background-color: #f9f9f9; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); transition: box-shadow 0.3s ease;">
+                <h3 style="margin-top: 0; font-size: 24px;">Card 2</h3>
+                <p style="margin-bottom: 0; color: #666;">This is information for card 2. You can write whatever you want here.</p>
+            </div>
+        </div>
+    
+        <div style="display: inline-block; margin-right: 20px;">
+            <div style="border: 1px solid #ddd; border-radius: 8px; padding: 20px; background-color: #f9f9f9; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); transition: box-shadow 0.3s ease;">
+                <h3 style="margin-top: 0; font-size: 24px;">Card 3</h3>
+                <p style="margin-bottom: 0; color: #666;">This is information for card 3. You can write whatever you want here.</p>
+            </div>
+        </div>
+    
+      </section>
+      <!-- end section -->
+      <!-- footer -->
+      
+            <!-- <p>Dessigned and developed by <strong>html.design</strong></p> -->
+            <footer class="footer">
+               <div class="container">
+                  <div class="row">
+                     <div class="footer-col">
+                        <h4>Contact Us</h4>
+                        <ul>
+                           <li><a href="#">Email: IDS.com</a></li>
+                           <li><a href="#">Phone:+121 56556 565556</a></li>
+                           <li><a href="#">Address:Your Address 123 Street</a></li>
+                        </ul>
+                     </div>
+                     <div class="footer-col">
+                        <h4>Quick links</h4>
+                        <ul>
+                           <li><a href="#">Home </a></li>
+                           <li><a href="#">About</a></li>
+                           <li><a href="#">Products</a></li>
+                           <li><a href="#">Contact</a></li>
+                        </ul>
+                     </div>
+                     <div class="footer-col">
+                        <h4>company</h4>
+                        <ul>
+                           <li><a href="#">about us</a></li>
+                           <li><a href="#">our services</a></li>
+                           <li><a href="#">privacy policy</a></li>
+                           <li><a href="#">affiliate program</a></li>
+                        </ul>
+                     </div>
+                     <div class="footer-col">
+                        <h4>follow us</h4>
+                        <div class="social-links">
+                           <a href="#"><i class="fab fa-facebook-f"></i></a>
+                           <a href="#"><i class="fab fa-twitter"></i></a>
+                           <a href="#"><i class="fab fa-instagram"></i></a>
+                           <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+           </footer>
+         
+               <!-- footer bottom -->
+              
+        
+      <!-- end footer -->
+      <!--=========== js section ===========-->
+      <!-- jQuery (necessary for Bootstrap's JavaScript) -->
+      <script src="static/js/jquery.min.js"></script>
+      <script src="static/js/popper.min.js"></script>
+      <script src="static/js/bootstrap.min.js"></script>
+      <!-- wow animation -->
+      <script src="static/js/wow.js"></script>
+      <!-- custom js -->
+      <script src="static/js/custom.js"></script>
+      <!-- google map js -->
+      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8eaHt9Dh5H57Zh0xVTqxVdBFCvFMqFjQ&callback=initMap"></script>
+      <!-- end google map js -->
+   </body>
+</html>

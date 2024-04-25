@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <!-- basic -->
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <!-- mobile metas -->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+      <!-- site metas -->
+      <title>Cyber Attack</title>
+      <link rel="icon" href="static/images/app-icon.jpg" type="image/icon type">
+      <meta name="keywords" content="">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <!-- site icons -->
+      <link rel="icon" href="static/images/fevicon/logo.jpg" type="image/png" />
+      <!-- bootstrap css -->
+      <link rel="stylesheet" href="static/css/bootstrap.min.css" />
+      <!-- site css -->
+      <link rel="stylesheet" href="static/css/style.css" />
+      <!-- responsive css -->
+      <link rel="stylesheet" href="static/css/responsive.css" />
+      <!-- colors css -->
+      <link rel="stylesheet" href="static/css/colors.css" />
+      <!-- wow animation css -->
+      <link rel="stylesheet" href="static/css/animate.css" />
+      <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+      <![endif]-->
+   </head>
+   <body id="default_theme" class="home_page1">
+      <!-- header -->
+      <header class="header header_style1">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-9 col-lg-10">
+                  <div class="logo"><a href="{{url_for('index')}}"><img src="static/images/IDDS.png" alt="#" /></a></div>
+                  <div class="main_menu float-right">
+                     <div class="menu">
+                        <ul class="clearfix">
+                           <li class="active"><a href="{{url_for('index')}}">Home</a></li>
+                           <!-- <li><a href="{{url_for('about')}}">About</a></li> -->
+                           <li><a href="{{url_for('load')}}">Upload</a></li>
+                           <li><a href="{{url_for('view')}}">View</a></li>
+                           <li><a href="{{url_for('preprocess')}}">Preprocessing</a></li>
+                           <li><a href="{{url_for('model')}}">Model Training </a></li>
+                    
+                           <li><a href="{{url_for('login')}}">Logout</a></li>
+                        </ul>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-md-3 col-lg-2">
+                  <div class="right_bt"><a class="bt_main" href="{{url_for('prediction')}}">Prediction</a> </div>
+               </div>
+            </div>
+         </div>
+      </header>
+
+      <section id="banner_parallax" class="slide_banner1">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12">
+                  <div class="full">
+                     <div class="slide_cont">
+                        <h2 style="right: 150px;bottom: 74px;">Detecting Cyber Attack  </h2>
+                        <!-- <h2 style="right: 150px;bottom: 82px;">APP</h2> -->
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- end header -->
+
+
+      <div class="overlay"></div>
+      <div class="gtco-container">
+          <div class="row">
+              <div class="col-md-12 col-md-offset-0 text-center">
+                  <div class="display-t">
+                      <div class="display-tc animate-box" data-animate-effect="fadeIn">
+                        <center><h3  style="bottom: 151px;color:rgb(11, 203, 236);top: -222;">{{msg}}</h3></center>
+                        <h3 style="color:rgb(11, 203, 236);bottom: 115px;">Detecting Cyber Attack </h3>
+
+                      <h3 style="color:rgb(11, 203, 236);bottom: 100px;">With the help of Artificial Intelligence</h3>
+                          <p>
+
+                              <form action="{{url_for('prediction')}}" method="post">
+<!--								<a href="/upload" class="btn btn-primary btn-lg">Get Started</a>-->
+
+
+                          <center><input type="text" name="duration" placeholder="Enter The duration"style="height: 53.99306px;width: 503.99306px; color:rgb(11, 203, 236); border-color:rgb(11, 203, 236);">
+                          <input type="text" name="protocol_type" placeholder="Enter The protocol_type"style="height: 53.99306px;width: 503.99306px; color:rgb(11, 203, 236); border-color:rgb(11, 203, 236);"><br>
+                          <input type="text" name="service" placeholder="Enter The service"style="height: 53.99306px;width: 503.99306px; color:rgb(11, 203, 236); border-color:rgb(11, 203, 236);">
+                          <input type="text" name="flag" placeholder="Enter The flag"style="height: 53.99306px;width: 503.99306px; color:rgb(11, 203, 236); border-color:rgb(11, 203, 236);"><br>
+                          <input type="text" name="src_bytes" placeholder="Enter The src_bytes"style="height: 53.99306px;width: 503.99306px; color:rgb(11, 203, 236); border-color:rgb(11, 203, 236);">
+                          <input type="text" name="dst_bytes" placeholder="Enter The dst_bytes"style="height: 53.99306px;width: 503.99306px; color:rgb(11, 203, 236); border-color:rgb(11, 203, 236);"><br>
+                          <input type="text" name="land" placeholder="Enter The land"style="height: 53.99306px;width: 503.99306px; color:rgb(11, 203, 236); border-color:rgb(11, 203, 236);">
+                          <input type="text" name="wrong_fragment" placeholder="Enter The wrong_fragment"style="height: 53.99306px;width: 503.99306px; color:rgb(11, 203, 236); border-color:rgb(11, 203, 236);"><br>
+                          <input type="text" name="urgent" placeholder="Enter The urgent"style="height: 53.99306px;width: 503.99306px; color:rgb(11, 203, 236); border-color:rgb(11, 203, 236);">
+                          <input type="text" name="hot" placeholder="Enter The hot"style="height: 53.99306px;width: 503.99306px; color:rgb(11, 203, 236); border-color:rgb(11, 203, 236);"><br>
+                          <input type="text" name="num_failed_logins" placeholder="Enter The num_failed_logins"style="height: 53.99306px;width: 503.99306px; color:rgb(11, 203, 236); border-color:rgb(11, 203, 236);">
+                          <input type="text" name="logged_in" placeholder="Enter The logged_in"style="height: 53.99306px;width: 503.99306px; color:rgb(11, 203, 236); border-color:rgb(11, 203, 236);"><br>
+                          <input type="text" name="num_compromised" placeholder="Enter The num_compromised"style="height: 53.99306px;width: 503.99306px; color:rgb(11, 203, 236); border-color:rgb(11, 203, 236);">
+                          <input type="text" name="root_shell" placeholder="Enter The root_shell"style="height: 53.99306px;width: 503.99306px; color:rgb(11, 203, 236); border-color:rgb(11, 203, 236);"><br>
+                          <input type="text" name="su_attempted" placeholder="Enter The su_attempted"style="height: 53.99306px;width: 503.99306px; color:rgb(11, 203, 236); border-color:rgb(11, 203, 236);">
+                          <input type="text" name="num_root" placeholder="Enter The num_root"style="height: 53.99306px;width: 503.99306px; color:rgb(11, 203, 236); border-color:rgb(11, 203, 236);"><br>
+                          <input type="text" name="num_file_creations" placeholder="Enter The num_file_creations"style="height: 53.99306px;width: 503.99306px; color:rgb(11, 203, 236); border-color:rgb(11, 203, 236);">
+                          <input type="text" name="num_shells" placeholder="Enter The num_shells"style="height: 53.99306px;width: 503.99306px; color:rgb(11, 203, 236); border-color:rgb(11, 203, 236);"><br>
+                          <input type="text" name="num_access_files" placeholder="Enter The num_access_files"style="height: 53.99306px;width: 503.99306px; color:rgb(11, 203, 236); border-color:rgb(11, 203, 236);">
+                          <input type="text" name="num_outbound_cmds" placeholder="Enter The num_outbound_cmds"style="height: 53.99306px;width: 503.99306px; color:rgb(11, 203, 236); border-color:rgb(11, 203, 236);"><br>
+                          <input type="text" name="is_host_login" placeholder="Enter  is_host_login"style="height: 53.99306px;width: 503.99306px; color:rgb(11, 203, 236); border-color:rgb(11, 203, 236);">
+                          <input type="text" name="is_guest_login" placeholder="Enter is_guest_login"style="height: 53.99306px;width: 503.99306px; color:rgb(11, 203, 236); border-color:rgb(11, 203, 236);"><br>
+                          <input type="text" name="count" placeholder="Enter The count"style="height: 53.99306px;width: 503.99306px; color:rgb(11, 203, 236); border-color:rgb(11, 203, 236);">
+                          <input type="text" name="srv_count" placeholder="Enter The srv_count"style="height: 53.99306px;width: 503.99306px; color:rgb(11, 203, 236); border-color:rgb(11, 203, 236);"><br>
+                          <input type="text" name="serror_rate" placeholder="Enter The serror_rate"style="height: 53.99306px;width: 503.99306px; color:rgb(11, 203, 236); border-color:rgb(11, 203, 236);">
+                          <input type="text" name="srv_serror_rate" placeholder="Enter The srv_serror_rate"style="height: 53.99306px;width: 503.99306px; color:rgb(11, 203, 236); border-color:rgb(11, 203, 236);"><br>
+                          <input type="text" name="rerror_rate" placeholder="Enter The rerror_rate"style="height: 53.99306px;width: 503.99306px; color:rgb(11, 203, 236); border-color:rgb(11, 203, 236);">
+                          <input type="text" name="srv_rerror_rate" placeholder="Enter The srv_rerror_rate"style="height: 53.99306px;width: 503.99306px; color:rgb(11, 203, 236); border-color:rgb(11, 203, 236);"><br>
+                          <input type="text" name="same_srv_rate" placeholder="Enter The same_srv_rate"style="height: 53.99306px;width: 503.99306px; color:rgb(11, 203, 236); border-color:rgb(11, 203, 236);">
+                          <input type="text" name="diff_srv_rate" placeholder="Enter The diff_srv_rate"style="height: 53.99306px;width: 503.99306px; color:rgb(11, 203, 236); border-color:rgb(11, 203, 236);"><br>
+                          <input type="text" name="srv_diff_host_rate" placeholder="Enter The srv_diff_host_rate"style="height: 53.99306px;width: 503.99306px; color:rgb(11, 203, 236); border-color:rgb(11, 203, 236);"><br>
+                          <input type="text" name="dst_host_count" placeholder="Enter The dst_host_count"style="height: 53.99306px;width: 503.99306px; color:rgb(11, 203, 236); border-color:rgb(11, 203, 236);">
+                          <input type="text" name="dst_host_srv_count" placeholder="Enter The dst_host_srv_count"style="height: 53.99306px;width: 503.99306px; color:rgb(11, 203, 236); border-color:rgb(11, 203, 236);"><br>
+                          <input type="text" name="dst_host_same_srv_rate" placeholder="Enter The dst_host_same_srv_rate"style="height: 53.99306px;width: 503.99306px; color:rgb(11, 203, 236); border-color:rgb(11, 203, 236);">
+                          <input type="text" name="dst_host_diff_srv_rate" placeholder="Enter The dst_host_diff_srv_rate"style="height: 53.99306px;width: 503.99306px; color:rgb(11, 203, 236); border-color:rgb(11, 203, 236);"><br>
+                          <input type="text" name="dst_host_same_src_port_rate" placeholder="Enter The dst_host_same_src_port_rate"style="height: 53.99306px;width: 503.99306px; color:rgb(11, 203, 236); border-color:rgb(11, 203, 236);">
+                          <input type="text" name="dst_host_srv_diff_host_rate" placeholder="Enter The dst_host_srv_diff_host_rate"style="height: 53.99306px;width: 503.99306px; color:rgb(11, 203, 236); border-color:rgb(11, 203, 236);"><br>
+                          <input type="text" name="dst_host_serror_rate" placeholder="Enter The dst_host_serror_rate"style="height: 53.99306px;width: 503.99306px; color:rgb(11, 203, 236); border-color:rgb(11, 203, 236);">
+                          <input type="text" name="dst_host_srv_serror_rate" placeholder="Enter The dst_host_srv_serror_rate"style="height: 53.99306px;width: 503.99306px; color:rgb(11, 203, 236); border-color:rgb(11, 203, 236);"><br>
+                          <input type="text" name="dst_host_rerror_rate" placeholder="Enter The dst_host_rerror_rate"style="height: 53.99306px;width: 503.99306px; color:rgb(11, 203, 236); border-color:rgb(11, 203, 236);">
+                          <input type="text" name="dst_host_srv_rerror_rate" placeholder="Enter The dst_host_srv_rerror_rate"style="height: 53.99306px;width: 503.99306px; color:rgb(11, 203, 236); border-color:rgb(11, 203, 236);"><br>
+                        </center>
+
+                          <input class="white_bt bt_main" type="submit" value="Submit"style="margin-left: 658px;margin-top: 33px;"> 
+                              </form>
+<!--								<a href="#" class="btn btn-white btn-outline btn-lg"></a></p>-->
+                          <!-- <img src="static/images/business_img.jpg" alt=”Image” height="1000" width="1200"> -->
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+           <!-- section -->
+ <section class="layout_padding gradiant_bg cross_layout">
+    <div class="container">
+       <div class="row">
+          <div class="col-sm-12">
+             <div class="full text_align_center white_fonts">
+                <div class="heading_main center_head_border heading_style_1">
+                   <!-- <h2>Easy <span>Steps</span></h2> -->
+                </div>
+             </div>
+          </div>
+       </div>
+       <div class="row step_section">
+          <div class="offset-xl-1 col-xl-10 col-md-12">
+             <div class="row">
+                <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12">
+                   <div class="step_blog arrow_right_step">
+                      <div class="step_inner">
+                         <!-- <i class="fa fa-diamond"></i><br> -->
+                         <!-- <p>Go app store</p> -->
+                      </div>
+                   </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12">
+                   <div class="step_blog">
+                      <div class="step_inner">
+                         <!-- <i class="fa fa-user"></i><br> -->
+                         <!-- <p>Create an Account</p> -->
+                      </div>
+                   </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12">
+                   <div class="step_blog">
+                      <div class="step_inner">
+                         <!-- <i class="fa fa-download"></i><br> -->
+                         <!-- <p>Download & Install</p> -->
+                      </div>
+                   </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12">
+                   <div class="step_blog">
+                      <div class="step_inner">
+                         <!-- <i class="fa fa-thumbs-up"></i><br> -->
+                         <!-- <p>Enjoy & Rate us!</p> -->
+                      </div>
+                   </div>
+                </div>
+             </div>
+          </div>
+       </div>
+    </div>
+ </section>
+ <!-- end section -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- footer -->
+    <footer class="footer_style_2">
+      <div class="footer_top">
+         <div class="container">
+            <div class="row">
+               <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 margin_bottom_30">
+                  <div class="full width_9" style="margin-bottom:25px;"> <a href="index.html"><img class="img-responsive" width="250" src="static/images/Capture.png" alt="#"></a> </div>
+                  <div class="full width_9">
+                     <p align = "justify"style="width: 600px;">Cyber-crime is proliferating everywhere exploiting every kind of vulnerability to the computing environment. Ethical Hackers pay
+                        more attention towards assessing vulnerabilities and recommending mitigation methodologies. The development of effective
+                        techniques has been an urgent demand in the field of the cyber security community. Most techniques used in today’s IDS are not able
+                        to deal with the dynamic and complex nature of cyber-attacks on computer networks. Machine learning for cyber security has become
+                        an issue of great importance recently due to the effectiveness of machine learning in cyber security issues. Machine learning
+                        techniques have been applied for major challenges in cyber security issues like intrusion detection, malware classification and
+                        detection, spam detection and phishing detection. Although machine learning cannot automate a complete cyber security system, it
+                        helps to identify cyber security threats more efficiently than other software-oriented methodologies, and thus reduces the burden on
+                        security analysts. Hence, efficient adaptive methods like various techniques of machine learning can result in higher detection rates,
+                        lower false alarm rates and reasonable computation and communication costs. Our main goal is that the task of finding attacks is
+                        fundamentally different from these other applications, making it significantly harder for the intrusion detection community to employ
+                        machine learning effectively. </p>
+                  </div>
+                  <div class="full width_9">
+                     <!-- <p>the vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati..</p> -->
+                  </div>
+               </div>
+               <!-- <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 margin_bottom_30">
+                  <div class="full">
+                     <div class="footer_blog_2 width_9">
+                        <h3>Twitter Feed</h3>
+                        <p><i class="fa fa-twitter"></i> Creative_Talent - 26 mins
+                           Te invitamos a seguir la cta. de WEntrepreneur_ ¡Atrévete! #Emprendimiento #PyMES #Economía #Bussines #Negocios https://t.co/Y7tZMmxGHn
+                        </p>
+                        <p><i class="fa fa-twitter"></i> Creative_Talent - 26 mins
+                           Te invitamos a seguir la cta. de WEntrepreneur_ ¡Atrévete! #Emprendimiento #PyMES #Economía #Bussines #Negocios https://t.co/Y7tZMmxGHn
+                        </p>
+                     </div>
+                  </div>
+               </div> -->
+               <div class="col-xs-12 col-sm-6 col-md-6 col-lg-2 margin_bottom_30"style="left: 0px;margin-left: 290px;">
+                  <div class="full">
+                     <div class="footer_blog_2">
+                        <h3>Social</h3>
+                     </div>
+                  </div>
+                  <div class="full">
+                     <ul class="footer-links">
+                        <li><a href="#"><i class="fa fa-facebook"></i> 256 Likes</a></li>
+                        <li><a href="#"><i class="fa fa-github"></i> 57+ Projects</a></li>
+                        <li><a href="#"><i class="fa fa-twitter"></i> 1,258 Followers</a></li>
+                        <li><a href="#"><i class="fa fa-pinterest"></i> 2538+ Pins</a></li>
+                     </ul>
+                  </div>
+               </div>
+               <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 margin_bottom_30">
+                  <div class="full">
+                     <div class="footer_blog_2 width_9">
+                        <h3>Blog</h3>
+                     </div>
+                     <div class="blog_post_footer">
+                        <div class="blog_post_img"> <img width="80" height="80" src="static/images/scr1.png" alt="#"> </div>
+                        <div class="blog_post_cont">
+                           <p class="date">July 22, 2015</p>
+                           <p class="post_head">Round and round like a carousel</p>
+                        </div>
+                     </div>
+                     <div class="blog_post_footer">
+                        <div class="blog_post_img"> <img width="80" height="80" src="static/images/scr2.png" alt="#"> </div>
+                        <div class="blog_post_cont">
+                           <p class="date">July 22, 2015</p>
+                           <p class="post_head">Round and round like a carousel</p>
+                        </div>
+                     </div>
+                     <div class="blog_post_footer">
+                        <div class="blog_post_img"> <img width="80" height="80" src="static/images/scr3.png" alt="#"> </div>
+                        <div class="blog_post_cont">
+                           <p class="date">July 22, 2015</p>
+                           <p class="post_head">Round and round like a carousel</p>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- footer bottom -->
+      <div class="footer_bottom">
+         <p style="color:white"><strong> Designed and developed by @GroupA4.  All rights reserved</strong></p>
+      </div>
+   </footer>
+   <!-- end footer -->
+   <!--=========== js section ===========-->
+   <!-- jQuery (necessary for Bootstrap's JavaScript) -->
+   <script src="static/js/jquery.min.js"></script>
+   <script src="static/js/popper.min.js"></script>
+   <script src="static/js/bootstrap.min.js"></script>
+   <!-- wow animation -->
+   <script src="static/js/wow.js"></script>
+   <!-- custom js -->
+   <script src="static/js/custom.js"></script>
+   <!-- google map js -->
+   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8eaHt9Dh5H57Zh0xVTqxVdBFCvFMqFjQ&callback=initMap"></script>
+   <!-- end google map js -->
+</body>
+</html>

@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <!-- basic -->
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <!-- mobile metas -->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+      <!-- site metas -->
+      <title>Intelligent Defense System</title>
+      <link rel="icon" href="static/images/app-icon.jpg" type="image/icon type">
+      <meta name="keywords" content="">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <!-- site icons -->
+      <link rel="icon" href="static/images/fevicon/logo.jpg" type="image/png" />
+      <!-- bootstrap css -->
+      <link rel="stylesheet" href="static/css/bootstrap.min.css" />
+      <!-- site css -->
+      <link rel="stylesheet" href="static/css/style.css" />
+      <!-- responsive css -->
+      <link rel="stylesheet" href="static/css/responsive.css" />
+      <!-- colors css -->
+      <link rel="stylesheet" href="static/css/colors.css" />
+      <!-- wow animation css -->
+      <link rel="stylesheet" href="static/css/animate.css" />
+      <link rel="stylesheet" href="static/css/footer.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-****************************************************" crossorigin="anonymous" />
+     
+      <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+
+      <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+      <![endif]-->
+   </head>
+   <body id="default_theme" class="home_page1">
+      <!-- header -->
+      <header class="header header_style1">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-9 col-lg-10">
+                  <div class="logo"><a href="{{url_for('index')}}"><img src="static/images/IDDS.png" alt="#" /></a></div>
+                  <div class="main_menu float-right">
+                     <div class="menu">
+                        <ul class="clearfix">
+                           <li class="active"><a href="{{url_for('index')}}">Home</a></li>
+                           <!-- <li><a href="{{url_for('about')}}">About</a></li> -->
+                           <li><a href="{{url_for('load')}}">Upload</a></li>
+                           <li><a href="{{url_for('view')}}">View</a></li>
+                           <li><a href="{{url_for('preprocess')}}">Preprocessing</a></li>
+                           <li><a href="{{url_for('model')}}">Model Training </a></li>
+                  
+                           <li><a href="{{url_for('login')}}">LogOut</a></li>
+                        </ul>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-md-3 col-lg-2">
+                  <div class="right_bt"><a class="bt_main" href="{{url_for('prediction')}}">Prediction</a> </div>
+               </div>
+            </div>
+         </div>
+      </header>
+      <section id="banner_parallax" class="slide_banner1">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12">
+                  <div class="full">
+                     <div class="slide_cont">
+                        <h2 style="right: 150px;">Upload Your Data Set </h2>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- end header -->
+
+
+      <div class="overlay"></div>
+      <div class="gtco-container">
+          <div class="row">
+              <div class="col-md-12 col-md-offset-0 text-center">
+                  <div class="display-t">
+
+                      <div class="display-tc animate-box" data-animate-effect="fadeIn">
+                          <center><h3  style="bottom: 222px;color:rgb(11, 203, 236);">{{msg}}</h3></center>
+                          <center><h3  style="bottom: 222px;color:rgb(11, 203, 236);">Welcome To Cyber Attack {{myname}}</h3></center>
+                            <h3 style="color:rgb(11, 203, 236);bottom: 115px;"> Detecting Cyber Attack  </h3>
+
+                          <h3 style="color:rgb(11, 203, 236);bottom: 100px;">With the help of Artificial Intelligence</h3>
+                          <p>
+
+
+
+                              <form action="{{url_for('load')}}" method="post" enctype="multipart/form-data">
+                              <center><input type="file" name="data" style="background-color:rgb(8, 213, 240);"></center>
+                              <input class="white_bt bt_main" type="submit" value="Upload"style="margin-left: 658px;margin-top: 33px;">
+                              </form>
+<!--								<a href="/upload" class="btn btn-primary btn-lg">Get Started</a>-->
+<!--								<a href="#" class="btn btn-white btn-outline btn-lg"></a></p>-->
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </header>
+
+
+ <!-- section -->
+ <section class="layout_padding gradiant_bg cross_layout">
+    <div class="container">
+       <div class="row">
+          <div class="col-sm-12">
+             <div class="full text_align_center white_fonts">
+                <div class="heading_main center_head_border heading_style_1">
+                   <!-- <h2>Easy <span>Steps</span></h2> -->
+                </div>
+             </div>
+          </div>
+       </div>
+       <div class="row step_section">
+          <div class="offset-xl-1 col-xl-10 col-md-12">
+             <div class="row">
+                <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12">
+                   <div class="step_blog arrow_right_step">
+                      <div class="step_inner">
+                         <!-- <i class="fa fa-diamond"></i><br> -->
+                         <!-- <p>Go app store</p> -->
+                      </div>
+                   </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12">
+                   <div class="step_blog">
+                      <div class="step_inner">
+                         <!-- <i class="fa fa-user"></i><br> -->
+                         <!-- <p>Create an Account</p> -->
+                      </div>
+                   </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12">
+                   <div class="step_blog">
+                      <div class="step_inner">
+                         <!-- <i class="fa fa-download"></i><br> -->
+                         <!-- <p>Download & Install</p> -->
+                      </div>
+                   </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12">
+                   <div class="step_blog">
+                      <div class="step_inner">
+                         <!-- <i class="fa fa-thumbs-up"></i><br> -->
+                         <!-- <p>Enjoy & Rate us!</p> -->
+                      </div>
+                   </div>
+                </div>
+             </div>
+          </div>
+       </div>
+    </div>
+ </section>
+ <!-- end section -->
+
+
+
+
+
+
+
+       <!-- footer -->
+       <footer class="footer">
+         <div class="container">
+            <div class="row">
+               <div class="footer-col">
+                  <h4>Contact Us</h4>
+                  <ul>
+                     <li><a href="#">Email: IDS.com</a></li>
+                     <li><a href="#">Phone:+121 56556 565556</a></li>
+                     <li><a href="#">Address:Your Address 123 Street</a></li>
+                  </ul>
+               </div>
+               <div class="footer-col">
+                  <h4>Quick links</h4>
+                  <ul>
+                     <li><a href="#">Home </a></li>
+                     <li><a href="#">About</a></li>
+                     <li><a href="#">Products</a></li>
+                     <li><a href="#">Contact</a></li>
+                  </ul>
+               </div>
+               <div class="footer-col">
+                  <h4>company</h4>
+                  <ul>
+                     <li><a href="#">about us</a></li>
+                     <li><a href="#">our services</a></li>
+                     <li><a href="#">privacy policy</a></li>
+                     <li><a href="#">affiliate program</a></li>
+                  </ul>
+               </div>
+               <div class="footer-col">
+                  <h4>follow us</h4>
+                  <div class="social-links">
+                     <a href="#"><i class="fab fa-facebook-f"></i></a>
+                     <a href="#"><i class="fab fa-twitter"></i></a>
+                     <a href="#"><i class="fab fa-instagram"></i></a>
+                     <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                  </div>
+               </div>
+            </div>
+         </div>
+     </footer>
+   
+        
+      <!-- end footer -->
+      <!--=========== js section ===========-->
+      <!-- jQuery (necessary for Bootstrap's JavaScript) -->
+      <script src="static/js/jquery.min.js"></script>
+      <script src="static/js/popper.min.js"></script>
+      <script src="static/js/bootstrap.min.js"></script>
+      <!-- wow animation -->
+      <script src="static/js/wow.js"></script>
+      <!-- custom js -->
+      <script src="static/js/custom.js"></script>
+      <!-- google map js -->
+      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8eaHt9Dh5H57Zh0xVTqxVdBFCvFMqFjQ&callback=initMap"></script>
+      <!-- end google map js -->
+   </body>
+</html>
